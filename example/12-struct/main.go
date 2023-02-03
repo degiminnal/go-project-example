@@ -19,9 +19,15 @@ func main() {
 	fmt.Println(a, b, c, d)                 // {wang 1024} {wang 1024} {wang 1024} {wang 1024}
 	fmt.Println(checkPassword(a, "haha"))   // false
 	fmt.Println(checkPassword2(&a, "haha")) // false
+	fmt.Println(d.checkPassword("1024"))
 }
 
 func checkPassword(u user, password string) bool {
+	return u.password == password
+}
+
+// 类成员函数
+func (u user) checkPassword(password string) bool {
 	return u.password == password
 }
 

@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"net"
 )
@@ -29,6 +30,7 @@ func process(conn net.Conn) {
 		if err != nil {
 			break
 		}
+		fmt.Println('a' + (b - 'a'))
 		_, err = conn.Write([]byte{b})
 		if err != nil {
 			break

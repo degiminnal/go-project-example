@@ -6,8 +6,8 @@ import (
 )
 
 type userInfo struct {
-	Name  string
-	Age   int `json:"age"`
+	Name  string `json:"name"`
+	Age   int    `json:"age"`
 	Hobby []string
 }
 
